@@ -1,0 +1,154 @@
+.register {
+    display: flex;
+    background-color: #282d36;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.icon-register {
+    font-size: 280%;
+    margin-right: -261px;
+    margin-top: -531px;
+    color: #6592f2;
+}
+
+.register-user h1 {
+    margin-top: -80%;
+    font-size: 200%;
+}
+
+.register-registerInputName {
+    display: flex;
+    align-items: center;
+    color: #b2b2b2;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 3px;
+    width: 170%;
+    height: 50px;
+}
+
+.register-registerInputName input {
+    background: transparent;
+    width: 100%;
+    outline-width: 0;
+    color: #000000;
+    border: none;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.register-registerInputEmail {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    color: #ffffff;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 3px;
+    width: 170%;
+    height: 50px;
+}
+
+.register-registerInputEmail input {
+    background: transparent;
+    width: 100%;
+    outline-width: 0;
+    color: #000000;
+    border: none;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.register-registerInputPassword {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    color: #b2b2b2;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 3px;
+    width: 170%;
+    height: 50px;
+}
+
+.register-registerInputPassword input {
+    background: transparent;
+    width: 100%;
+    outline-width: 0;
+    color: #000000;
+    border: none;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.register-user button {
+    width: 100%;
+    margin-left: 37%;
+    background-color: #1b68ed;
+    color: #EFF2F5;
+    font-weight: 800;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 40px;
+    border: none;
+    outline-width: 0;
+}
+
+.register-user button:hover {
+    background-color: #4cb2f2;
+    color: #000000;
+    cursor: pointer;
+}
+
+.linkback {
+    background-color: #e61919;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 800;
+    padding: 10px 82px 10px 34px;
+    margin-top: 20px;
+    margin-left: 59%;
+    font-size: 17px;
+    display: flex;
+    border-radius: 5px;
+}
+
+.linkback:hover {
+    background-color: #f44b4b;
+    color: #000000;
+}
+
+/* .buttonback Link p {
+    background-color: #f7f7f7;
+} */
+
+/* .buttonback p {
+    width: 100%;
+    margin-left: 37%;
+    background-color: #ed1b1b; 
+    color: #EFF2F5;
+    text-align: center;
+    font-weight: 800;
+    padding: 10;
+    height: 47px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 25px;
+    outline-width: 0;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.buttonback p:hover {
+    color: #000000;
+    background-color: #ba3f3f;
+    text-decoration: none;
+} */ 
