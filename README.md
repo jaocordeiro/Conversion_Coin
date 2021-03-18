@@ -1,3 +1,5 @@
+# Teste Ciapetro
+
 Este repositório foi feito para fazer integração com a API [Currencylayer](https://currencylayer.com/)
 
 ----
@@ -5,6 +7,8 @@ Este repositório foi feito para fazer integração com a API [Currencylayer](ht
 Requisitos:
 
 * NodeJs
+* Docker
+* Docker-Compose
 * npm ou yarn
 * Insomnia
 * React Router DOM
@@ -14,15 +18,25 @@ Requisitos:
 
 Como iniciar o Back-end:
 
+1 - Com docker instalado na maquinha executar o seguinte comando para subir o container do banco:
+
 ```cd back-end```
 
-Para executar a API, de o comando:
+```docker-compose up -d```
 
-```npm start```
+2 - Executar as Migrations do banco para criação das tabelas
 
-- Obeservações:<br/>
+```npm run knex:up```
 
-O back-end será exposto na URL http://localhost:3000
+3 - Para executar a API, de o comando:
+
+```npm run start```
+
+ - Obeservações:<br/>
+
+O back-end será exposto na URL http://localhost:3333
+<br/>
+O SGDB será exporto na URL http://localhost:5050
 
 ---
 
@@ -38,5 +52,22 @@ Instalar o React Hook Form com o comando: ```npm install react-hook-form yup sty
 
 Instalar o React Router DOM com o comando: ```npm install react-router-dom```
 
-O front-end será exposto na URL http://localhost:3001
+O front-end será exposto na URL http://localhost:3000
 ___
+
+Como cadastrar as rotas da API no Insomnia
+
+1 - Acessar o Insomnia
+
+2 - Clicar em "Import/Export"
+
+3 - Import Data
+
+4 - From File
+
+5 - selecionar o arquivo que esta dentro da pasta back-end
+
+
+
+
+

@@ -1,15 +1,21 @@
 {
-    "name": "conversor_de_moeda",
-    "version": "1.0.0",
-    "main": "index.js",
-    "license": "MIT",
-    "scripts": {
-        "start": "nodemon src/index.js"
-    },
-    "dependencies": {
-        "axios": "^0.21.1",
-        "cors": "^2.8.5",
-        "express": "^4.17.1",
-        "nodemon": "^2.0.7"
-    }
+  "name": "backend-ciapetro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "knex:create-migration": "knex --knexfile knexfile.js migrate:make",
+    "knex:down": "knex --knexfile knexfile.js migrate:down",
+    "knex:up": "knex --knexfile knexfile.js migrate:up"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "knex": "^0.95.2",
+    "nodemon": "^2.0.7",
+    "pg": "^8.5.1"
+  }
 }
