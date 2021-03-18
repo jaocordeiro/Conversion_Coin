@@ -94,7 +94,7 @@ function Login () {
                         </div>
                     
                     <Link className= "linkbuttonget"type="submit" as={Link} to="/converter/">
-                        Entrar
+                        <p>Entrar</p>
                     </Link>
 
                     <h4>Não tenho conta</h4>

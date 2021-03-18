@@ -145,6 +145,11 @@
     color: #000000;
 }
 
+.linkbuttonget p {
+    align-items: center;
+    margin-top: 15px;
+}
+
 .linkbutton {
     width: 50%;
     text-align: center;
@@ -166,5 +171,5 @@
 }
 
 .linkbutton p {
-    margin-top: 10px;
+    margin-top: 15px;
 }

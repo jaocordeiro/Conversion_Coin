@@ -18,11 +18,11 @@ function Converter () {
                 <div className="converter-title">
 
                     <div className = "converter-value">
-                        <h3>Real para Dolar</h3>
+                        <h3>Dolar para Real</h3>
                         <div className="converter-converterInputName">
                             <input
                                 type="text"
-                                placeholder="Digite o valor"
+                                placeholder="EX: 5 = 27,69"
                             />
                                 
                             <button className="buttonconverter" type="submit">
@@ -30,11 +30,11 @@ function Converter () {
                             </button>
                         </div>
 
-                        <h3>Dolar para Real</h3>
+                        <h3>Dolar para Euro</h3>
                         <div className="converter-converterInputName2">
                             <input
                                 type="text"
-                                placeholder="Digite o valor"
+                                placeholder="EX: 5 = 12,58"
                             />
                             <button className="buttonconverter" type="submit">
                                 Converter
