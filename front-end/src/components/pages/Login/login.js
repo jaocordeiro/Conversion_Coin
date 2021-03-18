@@ -1,10 +1,9 @@
-import React, { useState, Component } from 'react'
+import React, { useState } from 'react'
 
 import { Link } from 'react-router-dom'
 import { MdEmail, MdLock } from 'react-icons/md';
 import { HiEye, HiEyeOff, } from 'react-icons/hi';
-//import { useForm } from "react-hook-form";
-//import { urlBaseApi } from '../../../config/Api'
+
 
 import './login.css'
 
@@ -18,30 +17,7 @@ function Login () {
         e.preventDefault()
         setShow(!show);
     }
-
-    /* class Login extends Component {
-        constructor(props) {
-          super(props);
-          this.state = {
-          };
-        }
-
-        signInWithAnonymously = async () => {
-            firebase.auth().signInAnonymously().then( user => {
-              fetch(`${urlBaseApi}users/`, {
-                method: 'POST',
-                headers: {
-                  Accept: 'application/json',
-                  'Content-Type': 'application/json'
-                },
-                body: {
-                  uid: user.user.uid
-                }
-              })
-            })
-          } */
-      
-        
+         
         return (
 
             <div className="login">
