@@ -1,0 +1,173 @@
+.converterbar {
+    display: flex;
+    background-color: #2f5291;
+    color: #ffff;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    height: 8vh;
+    width: 100%;
+}
+
+.converterbar p {
+    margin-top: 25px;
+    position: center;
+    font-size: 200%;
+    left: 20px;
+}
+
+.converter {
+    display: flex;
+    background-color: #282d36;
+    color: #ffffff;
+    align-items: baseline;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.converter-value{
+    margin-top: 70%;
+}
+
+.converter-converterInputName {
+    display: flex;
+    align-items: center;
+    color: #b2b2b2;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 6px;
+    width: 85%;
+    height: 50px;
+}
+
+.converter-converterInputName input {
+    background: transparent;
+    width: 60%;
+    outline-width: 0;
+    color: #000000;
+    border: none;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.converter-converterInputName2 {
+    display: flex;
+    align-items: center;
+    color: #b2b2b2;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 6px;
+    width: 85%;
+    height: 50px;
+}
+
+.converter-converterInputName2 input {
+    background: transparent;
+    width: 60%;
+    outline-width: 0;
+    color: #000000;
+    border: none;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.converter-title h3{
+    color: #55c57a;
+    margin-top: 20%;
+}
+
+.buttonconverter {
+    position: relative;
+    display: flex;
+    padding: 18px 7px 20px 7px;
+    background-color: #404068;
+    color: #f9f9f9;
+    font-weight: 800;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.buttonconverter:hover {
+    background-color: #6080e8;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* .getout {
+    color: #ffffff;
+    align-items: center;
+    display: flex;
+    font-weight: 800;
+    background-color: #ee2b2b;
+    margin-top: 1%;
+    position: absolute;
+    margin-left: -20px;
+    border-radius: 5px;
+    font-size: 20px;
+    height: 50px;
+    left: 95%;
+    width: 70px;
+    cursor: pointer;
+    border: none;
+    outline-width: 0;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.getout:hover {
+    background-color: #d03f3f;
+    color: #000000;
+    cursor: pointer;
+} */
+
+
+/* .converter-converterInputName Link {
+    width: 40%;
+    margin-right: -94%;
+    background-color: #404068;
+    color: #f9f9f9;
+    font-weight: 800;
+    height: 60px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: 0px;
+    cursor: pointer;
+    border: none;
+    outline-width: 0;
+} */
+
+/* .converter-converterInputName Link:hover {
+    background-color: #6080e8;
+    color: #000000;
+    cursor: pointer;
+} */
+
+
+/* .converter-converterInputName2 Link {
+    width: 40%;
+    margin-right: -94%;
+    background-color: #404068;
+    color: #f9f9f9;
+    font-weight: 800;
+    height: 60px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: 0px;
+    cursor: pointer;
+    border: none;
+    outline-width: 0;
+} */
+
+/* .converter-converterInputName2 Link:hover {
+    background-color: #6080e8;
+    color: #000000;
+    cursor: pointer;
+} */
+
