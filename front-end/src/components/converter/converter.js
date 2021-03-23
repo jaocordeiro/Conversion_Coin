@@ -3,18 +3,19 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './converter.css'
 
+
 function Converter () {
     return (
-        
+            
             <div className= "converter">
                 <div className = "converterbar">
                     <p><strong>Conversor de Moeda</strong></p>
                 </div>
-                
+                    
                     <Link className= "getout" as={Link} to="/">
                         Sair
                     </Link>
-                
+                    
                 <div className="converter-title">
 
                     <div className = "converter-value">
@@ -24,7 +25,7 @@ function Converter () {
                                 type="text"
                                 placeholder="EX: 5 = 27,69"
                             />
-                                
+                                    
                             <button className="buttonconverter" type="submit">
                                 Converter
                             </button>
@@ -43,7 +44,7 @@ function Converter () {
                     </div>    
                 </div>
             </div>
-    )
-}
+        )
+    }
 
 export default Converter
