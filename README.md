@@ -67,12 +67,3 @@ Como cadastrar as rotas da API no Insomnia
 
 5 - selecionar o arquivo que esta dentro da pasta back-end
 
----
-
-## Imagens da Aplicação
-
-![Tela de Login](https://github.com/jaocordeiro/Conversion_Coin/blob/master/Captura%20de%20Tela%202021-03-18%20a%CC%80s%2014.10.13.png)
-
-![Tela de Cadastro](https://github.com/jaocordeiro/Conversion_Coin/blob/master/Captura%20de%20Tela%202021-03-18%20a%CC%80s%2014.10.47.png)
-
-![Tela de Conversão](https://github.com/jaocordeiro/Conversion_Coin/blob/master/Captura%20de%20Tela%202021-03-18%20a%CC%80s%2014.11.05.png)
