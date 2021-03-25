@@ -34,7 +34,7 @@ Como iniciar o Back-end:
 
  - Obeservações:<br/>
 
-O back-end será exposto na URL http://localhost:3355
+O back-end será exposto na URL http://localhost:3333
 
 O SGDB será exporto na URL http://localhost:5050
 

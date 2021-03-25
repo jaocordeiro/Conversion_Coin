@@ -1,7 +1,7 @@
 const knex = require('../database/connection');
 
 class UserController{
-    async create(req, res) {
+    async signup(req, res) {
         try{
             const selectExists = await knex('users').where('mail', req.body.mail).first();
             if(selectExists){
@@ -20,7 +20,7 @@ class UserController{
         }
     }
 
-    async login(req, res){
+    async signin(req, res){
         try{
             const selectUser = await knex('users')
             .where('mail', req.body.mail)

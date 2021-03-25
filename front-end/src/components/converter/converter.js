@@ -15,7 +15,7 @@ class Converter extends Component {
             optionsCoins: {},
             convertedValue: ''
         };
-        this.getCoinsFromApi();
+        //this.getCoinsFromApi();
     }
 
     getCoinsFromApi = () => {
@@ -23,7 +23,9 @@ class Converter extends Component {
           response.json()
         ).then(json => {
           this.setState({optionsCoins: json.currencies});
+            return;
         });
+        console.log("Lucapeta")
       }
 
       changeSourceCoin = (coin) => {
@@ -72,7 +74,7 @@ class Converter extends Component {
                                 />
                                     
                                 <button className="buttonconverter" 
-                                    onClick = "teste()"  
+                                    onClick = {this.getCoinsFromApi}
                                     type="submit"
                                     value= "Coverter"
                                 >
