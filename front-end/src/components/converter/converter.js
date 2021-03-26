@@ -3,53 +3,48 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './converter.css'
 import { urlBaseApi } from '../../config/api'
-import { Alert } from 'react'
+import axios from 'axios'
+//import { Alert, Select } from 'react'
 
 class Converter extends Component {
     constructor(props){ 
         super(props)
-        
-        this.state = {
-            sourceCoin: "USD",
-            destinyCoin: "",
-            optionsCoins: {},
-            convertedValue: ''
-        };
-        //this.getCoinsFromApi();
-    }
-
-    getCoinsFromApi = () => {
-        fetch(urlBaseApi + 'listCoins/').then(response =>
-          response.json()
-        ).then(json => {
-          this.setState({optionsCoins: json.currencies});
-            return;
-        });
-        console.log("Lucapeta")
-      }
-
-      changeSourceCoin = (coin) => {
-        if (coin !== "USD") {
-          Alert.alert("Aviso!", " Dólar é a única moeda autorizada para há conversão");
-          return
+      
+        this.state={
+          listcoins: [],
+          live: []
         }
-        this.setState({sourceCoin: coin});
-      }
     
-      submitConversao = () => {
-        fetch(urlBaseApi + 'endpoint/', {
-          method: 'POST',
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            firstParam: 'yourValue',
-            secondParam: 'yourOtherValue'
-          })
-        });
+        this.getlistCoins = this.getlistCoins.bind(this);
+        //this.getlive = this.getlive.bind(this);
       }
 
+      componentDidMount(){
+        this.getlistCoins();
+        //this.getlive();
+      }
+
+      getlistCoins= async() => {
+        await axios.get(`${urlBaseApi}listCoins/`)
+        .then(res => {
+          this.setState({listcoins: res.data});
+          console.log(res.data);
+        }).catch((error) => {
+          console.log(error);
+        });
+      }
+      
+
+      /* getlive= async() => {
+        await axios.get(`${urlBaseApi}live/`)
+        .then(res => {
+          this.setState({live: res.data});
+          console.log(res.data);
+        }).catch((error) => {
+          console.log(error);
+        });
+      }
+ */
     render() {
         return (
             
@@ -65,16 +60,23 @@ class Converter extends Component {
                     <div className="converter-title">
 
                         <div className = "converter-value">
-                            <h3>Dolar para Real</h3>
+                            <h3>Converter</h3>
+
+                            <select className = "coins"
+                              //value = {this.state.listcoins}
+                              onChange = {this.changelistCoins}
+                            > 
+                            </select>
+
                             <div className="converter-converterInputName">
                                 <input
                                     type="text"
-                                    placeholder="EX: 5 = 27,69"
+                                    placeholder="Insira um valor"
                                     name= "converter"
                                 />
-                                    
+
                                 <button className="buttonconverter" 
-                                    onClick = {this.getCoinsFromApi}
+                                    //onClick = {this.getCoinsFromApi}
                                     type="submit"
                                     value= "Coverter"
                                 >
