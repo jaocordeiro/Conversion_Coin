@@ -12,18 +12,17 @@ class Converter extends Component {
 
     this.state = {
       listcoins: [],
-      live: [],
+      live: "",
       saveFromCoin: "",
       saveToCoins: "",
+      valueToConvert: "",
     };
 
     this.getlistCoins = this.getlistCoins.bind(this);
-    //this.getlive = this.getlive.bind(this);
   }
 
   componentDidMount() {
     this.getlistCoins();
-    //this.getlive();
   }
 
   getlistCoins = async () => {
@@ -37,16 +36,6 @@ class Converter extends Component {
         console.log(error);
       });
   };
-
-  /* getlive= async() => {
-        await axios.get(`${urlBaseApi}live/`)
-        .then(res => {
-          this.setState({live: res.data});
-          console.log(res.data);
-        }).catch((error) => {
-          console.log(error);
-        });
-      }*/
 
   selectFromCoins = () => {
     var coins = document.getElementById("fromCoins").value;
@@ -70,6 +59,25 @@ class Converter extends Component {
       alert("Escolhe as moedas");
       return;
     }
+  };
+  
+  stringJson = JSON.stringify(jsonRequest);
+  postlive = async () => {
+    await axios
+      .post(`${urlBaseApi}live/` {
+        method: 'POST',
+        headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+        }
+      })
+      .then((res) => {
+        this.setState({ live: res.data["value"] });
+        console.log(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   render() {

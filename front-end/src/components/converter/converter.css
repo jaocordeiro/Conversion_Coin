@@ -10,7 +10,7 @@
 }
 
 .converterbar p {
-  margin-top: 0px;
+  margin-top: 20px;
   position: fixed;
   font-size: 200%;
   left: 20px;
@@ -53,27 +53,29 @@
 }
 
 .fromcoins {
-  background-color: #2beed1;
+  background-color: #ffffff;
   display: flex;
-  margin-top: 50px;
-  margin-left: 35px;
+  margin-top: 70px;
+  margin-left: 90px;
   font-size: 15px;
   height: 40px;
   width: 75px;
   border: none;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .tocoins {
-  background-color: #2b79ee;
+  background-color: #ffffff;
   display: flex;
   margin-top: -40px;
-  margin-left: 150px;
+  margin-left: 190px;
   font-size: 15px;
   height: 40px;
   width: 75px;
   border: none;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .converter-value {
@@ -82,12 +84,16 @@
 
 .converter-value h3 {
   align-items: center;
+  margin-left: 60px;
+  font-weight: 800;
+  font-size: 25px;
 }
 
 .converter-converterInputName {
   display: flex;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 35px;
+  margin-left: 30px;
   color: #b2b2b2;
   background-color: #f0f0f0;
   border-radius: 10px;
