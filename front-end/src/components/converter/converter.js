@@ -90,17 +90,21 @@ class Converter extends Component {
 
         <div className="converter-title">
           <div className="converter-value">
-            <h3>Conversor</h3>
+            <h3>Selecione as Moedas</h3>
 
-            <select id="fromCoins" onChange={this.selectFromCoins}>
-              <option value="">Selecione uma moeda:</option>
+            <select
+              className="fromcoins"
+              id="fromCoins"
+              onChange={this.selectFromCoins}
+            >
+              <option value="">Select:</option>
               {Object.keys(listcoins).map((item) => {
                 return <option value={item}>{item}</option>;
               })}
             </select>
 
-            <select id="toCoins">
-              <option value="">Selecione uma moeda:</option>
+            <select className="tocoins" id="toCoins">
+              <option value="">Select:</option>
               {Object.keys(listcoins).map((item) => {
                 return <option value={item}>{item}</option>;
               })}
@@ -108,7 +112,7 @@ class Converter extends Component {
 
             <div className="converter-converterInputName">
               <input
-                type="text"
+                type="number"
                 placeholder="Insira um valor"
                 name="converter"
               />
