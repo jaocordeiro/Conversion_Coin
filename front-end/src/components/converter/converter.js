@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./converter.css";
 import { urlBaseApi } from "../../config/api";
 import axios from "axios";
-//import { Alert } from 'react'
+import api from "../../config/custonAxios";
 
 class Converter extends Component {
   constructor(props) {
@@ -12,10 +12,11 @@ class Converter extends Component {
 
     this.state = {
       listcoins: [],
-      live: "",
+      destConvert: "",
       saveFromCoin: "",
       saveToCoins: "",
-      valueToConvert: "",
+      valueConvert: "",
+      conversion: "",
     };
 
     this.getlistCoins = this.getlistCoins.bind(this);
@@ -56,33 +57,38 @@ class Converter extends Component {
   validCoins = () => {
     const { saveToCoin, saveFromCoin } = this.state;
     if (saveToCoin === "" || saveFromCoin === "") {
-      alert("Escolhe as moedas");
+      alert("Por Favor defina as moedas");
       return;
     }
+    this.postdestConvert();
   };
-  
-  stringJson = JSON.stringify(jsonRequest);
-  postlive = async () => {
-    await axios
-      .post(`${urlBaseApi}live/` {
-        method: 'POST',
-        headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-        }
-      })
-      .then((res) => {
-        this.setState({ live: res.data["value"] });
-        console.log(res.data);
-      })
-      .catch((error) => {
-        console.log(error);
+
+  /* jsonRequest = {
+    source: listcoins,
+    destiny: destinyCoin,
+    valueToConvert: valueToConvert,
+  }; */
+
+  postdestConvert = async () => {
+    console.log("teste");
+
+    try {
+      const response = api.post("live", {
+        dest: "BRL",
+        value: 200,
       });
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   render() {
     const { listcoins } = this.state;
     console.log("Cheguei aquuuiiiiiiiiii", listcoins);
+
+    const { destConvert } = this.state;
+    console.log("é tetrrrrraaaaaa", destConvert);
 
     return (
       <div className="converter">
