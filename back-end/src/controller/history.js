@@ -32,7 +32,7 @@ class HistoryController {
 
       const conversion = (
         request.data.quotes[sourceConvert + destConvert] * valueConvert
-      ).toFixed(3);
+      ).toFixed(2);
 
       const saveDb = await knex("history").insert({
         source_coin: sourceConvert,

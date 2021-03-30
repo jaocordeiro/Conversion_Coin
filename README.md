@@ -17,7 +17,7 @@ Requisitos:
 
 Como iniciar o Back-end:
 
-1 - Com docker instalado na maquinha executar o seguinte comando para subir o container do banco:
+1 - Com `Docker` instalado na maquinha executar o seguinte comando para subir o container do banco:
 
 `cd back-end`
 

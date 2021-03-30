@@ -10,7 +10,7 @@
 }
 
 .converterbar p {
-  margin-top: 20px;
+  margin-top: 0px;
   position: fixed;
   font-size: 200%;
   left: 20px;
@@ -134,50 +134,15 @@
   cursor: pointer;
 }
 
-/* .converter-converterInputName2 {
-    display: flex;
-    align-items: center;
-    color: #b2b2b2;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    padding: 3px;
-    width: 85%;
-    height: 50px;
+.converted {
+  background-color: #42d35f;
+  display: flex;
+  margin: 20px 115px 0px 150px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #000000;
 }
 
-.converter-converterInputName2 input {
-    background: transparent;
-    width: 60%;
-    outline-width: 0;
-    color: #000000;
-    border: none;
-    font-size: 17px;
-    margin-left: 10px;
-    margin-right: 10px;
+.converted p {
+  text-align: center;
 }
-
-.converter-converterInputName2 button {
-    width: 40%;
-    margin-right: -94%;
-    background-color: #404068;
-    color: #f9f9f9;
-    font-weight: 800;
-    height: 60px;
-    border-radius: 5px;
-    font-size: 15px;
-    margin-top: 0px;
-    cursor: pointer;
-    border: none;
-    outline-width: 0;
-}
-
-.converter-converterInputName2 button:hover {
-    background-color: #6080e8;
-    color: #000000;
-    cursor: pointer;
-}
-
-.converter-title h3{
-    color: #55c57a;
-    margin-top: 20%;
-} */

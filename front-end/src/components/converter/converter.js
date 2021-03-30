@@ -2,8 +2,6 @@ import React, { Component } from "react";
 
 import { Link } from "react-router-dom";
 import "./converter.css";
-import { urlBaseApi } from "../../config/api";
-import axios from "axios";
 import api from "../../config/custonAxios";
 
 class Converter extends Component {
@@ -14,9 +12,9 @@ class Converter extends Component {
       listcoins: [],
       destConvert: "",
       saveFromCoin: "",
-      saveToCoins: "",
-      valueConvert: "",
-      conversion: "",
+      saveToCoin: "",
+      inputValue: "",
+      converted: 0,
     };
 
     this.getlistCoins = this.getlistCoins.bind(this);
@@ -27,15 +25,12 @@ class Converter extends Component {
   }
 
   getlistCoins = async () => {
-    await axios
-      .get(`${urlBaseApi}listCoins/`)
-      .then((res) => {
-        this.setState({ listcoins: res.data["currencies"] });
-        console.log(res.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    try {
+      const response = await api.get("listCoins");
+      this.setState({ listcoins: response.data["currencies"] });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   selectFromCoins = () => {
@@ -56,39 +51,42 @@ class Converter extends Component {
 
   validCoins = () => {
     const { saveToCoin, saveFromCoin } = this.state;
-    if (saveToCoin === "" || saveFromCoin === "") {
-      alert("Por Favor defina as moedas");
+
+    if (saveFromCoin === "") {
+      alert("Por Favor defina a moeda primária");
       return;
     }
+    if (saveToCoin === "") {
+      alert("Por Favor defina a moeda secundária");
+      return;
+    }
+
     this.postdestConvert();
   };
 
-  /* jsonRequest = {
-    source: listcoins,
-    destiny: destinyCoin,
-    valueToConvert: valueToConvert,
-  }; */
+  handleChange = (text) => {
+    this.setState({ inputValue: text.target.value });
+  };
 
   postdestConvert = async () => {
-    console.log("teste");
-
+    const { saveToCoin, inputValue } = this.state;
+    if (saveToCoin && inputValue === "") {
+      alert("Defina um valor para a conversão");
+    }
     try {
-      const response = api.post("live", {
-        dest: "BRL",
-        value: 200,
+      const response = await api.post("live", {
+        dest: saveToCoin,
+        value: inputValue,
       });
       console.log(response.data);
+      this.setState({ converted: response.data["value"] });
     } catch (error) {
       console.log(error);
     }
   };
 
   render() {
-    const { listcoins } = this.state;
-    console.log("Cheguei aquuuiiiiiiiiii", listcoins);
-
-    const { destConvert } = this.state;
-    console.log("é tetrrrrraaaaaa", destConvert);
+    const { listcoins, converted, inputValue } = this.state;
 
     return (
       <div className="converter">
@@ -117,7 +115,11 @@ class Converter extends Component {
               })}
             </select>
 
-            <select className="tocoins" id="toCoins">
+            <select
+              className="tocoins"
+              id="toCoins"
+              onChange={this.selectToCoins}
+            >
               <option value="">Select:</option>
               {Object.keys(listcoins).map((item) => {
                 return <option value={item}>{item}</option>;
@@ -129,6 +131,8 @@ class Converter extends Component {
                 type="number"
                 placeholder="Insira um valor"
                 name="converter"
+                value={inputValue}
+                onChange={this.handleChange}
               />
 
               <button
@@ -139,6 +143,10 @@ class Converter extends Component {
               >
                 Converter
               </button>
+            </div>
+
+            <div className="converted">
+              {converted > 0 && <p>{converted}</p>}
             </div>
           </div>
         </div>
